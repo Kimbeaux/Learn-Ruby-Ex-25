@@ -1,0 +1,40 @@
+irb(main):001:0> require './ex25'
+=> true
+irb(main):002:0> sentence = "All good things come to those who wait."
+=> "All good things come to those who wait."
+irb(main):003:0> words = Ex25.break_words(sentence)
+=> ["All", "good", "things", "come", "to", "those", "who", "wait."]
+irb(main):004:0> sorted_words = Ex25.sort_words(words)
+=> ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+irb(main):005:0> Ex25.print_first_word(words)
+All
+=> nil
+irb(main):006:0> Ex25.print_last_word(words)
+wait.
+=> nil
+irb(main):007:0> Ex25.wrods
+NoMethodError: undefined method `wrods' for Ex25:Module
+        from (irb):6
+irb(main):008:0> words
+=> ["good", "things", "come", "to", "those", "who"]
+
+
+irb(main):009:0> Ex25.print_first_word(sorted_words)    # Prints/drops first word in this array.
+All
+=> nil
+irb(main):010:0> Ex25.print_last_word(sorted_words)     # Prints/drops last word in this array.
+who
+=> nil
+irb(main):011:0> sorted_words
+=> ["come", "good", "things", "those", "to", "wait."]   # Prints current array, notice first & last words have been dropped.
+irb(main):012:0> Ex25.sort_sentence(sentence)           # Re-runs sort_sentence on 'sentence'
+=> ["All", "come", "good", "things", "those", "to", "wait.", "who"]
+irb(main):013:0> Ex25.print_first_and_last(sentence)    # Breaks sentence into words, prints first word and shifts others down by one, prints last word after popping it off the end.
+All
+wait.
+=> nil
+irb(main):014:0> Ex25.print_first_and_last_sorted(sentence)   # Breaks sentence into words, sorts the words, prints first word and shifts others down by one, prints last word after popping it off the end.
+All
+who
+=> nil
+irb(main):015:0> ^D
